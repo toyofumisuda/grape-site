@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>【実習】Grape — 熟した、テクノロジー。</title>
+  <meta name="description" content="【実習】架空企業Grape株式会社の公式サイト。学生とクリエイターのためのスマートフォン「Vine Pro」をはじめとする製品を紹介します。本サイトは講義課題として制作したものです。">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="importmap">
+  { "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  } }
+  </script>
+</head>
+<body data-page="home">
+  <div class="practice-bar" role="note">本サイトは講義課題として制作したものです。<span class="en">This site is created as a course exercise.</span></div>
+
+  <header class="gnav" id="gnav">
+    <nav class="gnav-inner" aria-label="グローバルナビゲーション">
+      <a class="gnav-logo" href="index.html" aria-label="Grape ホーム">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M52 15c8-11 24-12 33-4-8 9-22 11-33 4z"/><rect x="47.5" y="12" width="5" height="16" rx="2.5"/><circle cx="28" cy="40" r="10.5"/><circle cx="50" cy="40" r="10.5"/><circle cx="72" cy="40" r="10.5"/><circle cx="39" cy="60" r="10.5"/><circle cx="61" cy="60" r="10.5"/><circle cx="50" cy="80" r="10.5"/></svg>
+        <span>Grape</span>
+      </a>
+      <ul class="gnav-links" id="gnav-links">
+        <li><a href="index.html" data-nav="home">ホーム</a></li>
+        <li><a href="vine-pro.html" data-nav="vine">Vine Pro</a></li>
+        <li><a href="products.html" data-nav="products">製品</a></li>
+        <li><a href="about.html" data-nav="about">会社概要</a></li>
+        <li><a href="contact.html" data-nav="contact">お問い合わせ</a></li>
+      </ul>
+      <a class="gnav-cta" href="contact.html#form">購入相談</a>
+      <button class="gnav-toggle" type="button" aria-expanded="false" aria-controls="gnav-links" aria-label="メニューを開く"><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== 3D scroll story ===== -->
+    <section class="hero3d" id="hero3d" aria-label="Vine Pro 紹介">
+      <div class="stage">
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+        <div class="stage-fallback"><img src="img/vine-pro.svg" alt="Vine Pro の背面と前面のイラスト" width="420" height="420"></div>
+
+        <div class="cap-wrap intro-wrap">
+          <div class="cap hero-intro">
+            <p class="eyebrow">新登場</p>
+            <h1>Vine Pro</h1>
+            <p class="lead">熟した、テクノロジー。</p>
+          </div>
+        </div>
+        <div class="scroll-hint" aria-hidden="true">スクロール<i></i></div>
+
+        <div class="cap-wrap">
+          <div class="cap cap-a">
+            <p class="eyebrow">Pro カメラシステム</p>
+            <h2>夜も、昼も。<br>見たままを、そのまま。</h2>
+            <p><strong>48MP</strong>のメイン・超広角・5倍望遠。新しい <strong>Grape Lens エンジン</strong>が、光の少ない場所でも、ぶどうの粒のようにみずみずしい色をすくい上げます。</p>
+          </div>
+        </div>
+
+        <div class="cap-wrap right">
+          <div class="cap cap-b">
+            <p class="eyebrow">デザイン</p>
+            <h2>驚くほど、薄い。<br>驚くほど、軽い。</h2>
+            <p>再生アルミニウム100%のユニボディを、ひとつの塊から削り出しました。</p>
+            <div class="cap-stats"><div><b>7.4<small>mm</small></b><span>厚さ</span></div><div><b>171<small>g</small></b><span>重さ</span></div></div>
+          </div>
+        </div>
+
+        <div class="cap-wrap">
+          <div class="cap cap-c">
+            <p class="eyebrow">ディスプレイ</p>
+            <h2>光を、<br>手のひらに。</h2>
+            <p>6.3インチ <strong>Lumina OLED</strong>。1〜120Hzの可変リフレッシュレートと最大3,000ニトの明るさで、真昼の屋外でもくっきり見えます。</p>
+          </div>
+        </div>
+
+        <div class="cap-wrap spec-wrap">
+          <div class="spec-col">
+            <div class="spec"><b>G1 チップ</b><span>3nmプロセス・16コア Neural Engine</span></div>
+            <div class="spec"><b>最大29時間</b><span>ビデオ再生</span></div>
+          </div>
+          <div class="spec-col r">
+            <div class="spec"><b>IP68</b><span>防塵・防水</span></div>
+            <div class="spec"><b>5年間</b><span>OS アップデートを保証</span></div>
+          </div>
+        </div>
+
+        <div class="cap-wrap final-wrap">
+          <div class="cap cap-e">
+            <h2 class="grad-text">Vine Pro</h2>
+            <p>¥139,800（税込）から。学割なら、さらに15%オフ。</p>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="contact.html#form">購入相談をする</a>
+              <a class="btn btn-ghost inv" href="vine-pro.html">詳しく見る</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Lineup ===== -->
+    <section class="section" aria-labelledby="lineup-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">ラインナップ</p>
+          <h2 class="h-l" id="lineup-title">ひとつの房に、<br>ぜんぶ、つながる。</h2>
+          <p class="lead">スマートフォン、ノートPC、イヤホン、ウォッチ。Grapeの製品は、手に取った瞬間から一緒に動きます。</p>
+        </div>
+        <div class="bento">
+          <article class="tile span-6 center reveal" style="background:#0b0613;color:#f5f5f7">
+            <p class="eyebrow" style="color:#ff9ad8">新登場</p>
+            <h3 style="font-size:clamp(34px,4.6vw,56px)">Vine Pro</h3>
+            <p class="tile-sub" style="color:#a1a1a6">Proの、さらに先へ。</p>
+            <div class="tile-links" style="justify-content:center"><a class="link-more" style="color:#c9a8ff" href="vine-pro.html">詳しく見る</a><a class="link-more" style="color:#c9a8ff" href="contact.html#form">購入相談</a></div>
+            <img class="tile-img" style="max-width:420px" src="img/vine-pro.svg" alt="Vine Pro の背面と前面のイラスト" width="420" height="420" loading="lazy">
+          </article>
+          <article class="tile span-3 reveal">
+            <h3>GrapeBook Air</h3>
+            <p class="tile-sub">1.1kg。一日中、どこへでも。</p>
+            <div class="tile-links"><a class="link-more" href="products.html#book">詳しく見る</a></div>
+            <img class="tile-img" src="img/grapebook.svg" alt="GrapeBook Air のイラスト" width="360" height="260" loading="lazy">
+          </article>
+          <article class="tile span-3 reveal" data-delay=".1">
+            <h3>Grape Buds Pro</h3>
+            <p class="tile-sub">静けさを、耳に。</p>
+            <div class="tile-links"><a class="link-more" href="products.html#buds">詳しく見る</a></div>
+            <img class="tile-img" src="img/buds.svg" alt="Grape Buds Pro のイラスト" width="360" height="290" loading="lazy">
+          </article>
+          <article class="tile span-2 reveal">
+            <h3>Grape Band</h3>
+            <p class="tile-sub">からだの声を、聞こう。</p>
+            <div class="tile-links"><a class="link-more" href="products.html#band">詳しく見る</a></div>
+            <img class="tile-img" style="max-width:200px" src="img/band.svg" alt="Grape Band のイラスト" width="200" height="230" loading="lazy">
+          </article>
+          <article class="tile span-4 reveal" data-delay=".1">
+            <h3>Vine</h3>
+            <p class="tile-sub">はじめての、ちょうどいい。5色の新しいカラー。</p>
+            <div class="tile-links"><a class="link-more" href="products.html#vine">詳しく見る</a></div>
+            <img class="tile-img" src="img/vine.svg" alt="3色の Vine のイラスト" width="360" height="360" loading="lazy">
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Mission ===== -->
+    <section class="section dark" aria-labelledby="mission-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Grapeが目指すもの</p>
+          <h2 class="h-l" id="mission-title">テクノロジーを、<br><span class="grad-text">もっと手のひらの近くに。</span></h2>
+          <p class="lead">学ぶ人、つくる人のための道具を。長く使えて、地球にもやさしい製品をつくります。</p>
+        </div>
+        <div class="stats">
+          <div class="stat reveal"><b><span data-count="100">100</span>%</b><span>筐体に再生アルミニウムを使用</span></div>
+          <div class="stat reveal" data-delay=".1"><b><span data-count="5">5</span>年</b><span>すべての製品でOSアップデートを保証</span></div>
+          <div class="stat reveal" data-delay=".2"><b>2030</b><span>サプライチェーン全体でカーボンニュートラルへ</span></div>
+        </div>
+        <p class="center reveal" style="margin-top:56px"><a class="link-more" href="about.html">Grapeについて詳しく</a></p>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section-tight" aria-label="学割のご案内">
+      <div class="container">
+        <div class="cta-band reveal">
+          <p class="eyebrow" style="color:#ffb3e6">学生・教職員の方へ</p>
+          <h2>学割で、最大15%オフ。</h2>
+          <p>学生証の提示だけで、Vine Pro・GrapeBook Airがおトクに。Grape Care+ も1年分ついてきます。</p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="contact.html#form">購入相談をする</a>
+            <a class="btn btn-ghost inv" href="products.html">製品を比べる</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-notes">
+        本サイトは講義課題として制作したものです。This site is created as a course exercise.<br>
+        Grape株式会社および掲載している製品・価格・仕様はすべて架空のものです。サイト内の画像・イラスト・3Dモデルはすべて自作です。
+      </div>
+      <div class="footer-cols">
+        <div><h4>製品</h4><ul><li><a href="vine-pro.html">Vine Pro</a></li><li><a href="products.html#vine">Vine</a></li><li><a href="products.html#book">GrapeBook Air</a></li><li><a href="products.html#buds">Grape Buds Pro</a></li><li><a href="products.html#band">Grape Band</a></li></ul></div>
+        <div><h4>サービス</h4><ul><li><a href="products.html#services">Grape Cloud</a></li><li><a href="products.html#services">Grape Care+</a></li><li><a href="products.html#services">学割</a></li></ul></div>
+        <div><h4>Grapeについて</h4><ul><li><a href="about.html">会社概要</a></li><li><a href="about.html#circle">環境への取り組み</a></li><li><a href="about.html#history">沿革</a></li></ul></div>
+        <div><h4>サポート</h4><ul><li><a href="contact.html">お問い合わせ</a></li><li><a href="contact.html#faq">よくある質問</a></li><li><a href="contact.html#form">購入相談</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© <span data-year>2026</span> Grape Inc.（架空の企業）</span><span>日本</span></div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/common.js"></script>
+  <script type="module" src="js/hero.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>【実習】会社概要 — Grape</title>
+  <meta name="description" content="【実習】架空企業Grape株式会社の会社概要。ミッション、大切にしている価値、環境への取り組み、沿革を紹介します。">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="about">
+  <div class="practice-bar" role="note">本サイトは講義課題として制作したものです。<span class="en">This site is created as a course exercise.</span></div>
+
+  <header class="gnav" id="gnav">
+    <nav class="gnav-inner" aria-label="グローバルナビゲーション">
+      <a class="gnav-logo" href="index.html" aria-label="Grape ホーム">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M52 15c8-11 24-12 33-4-8 9-22 11-33 4z"/><rect x="47.5" y="12" width="5" height="16" rx="2.5"/><circle cx="28" cy="40" r="10.5"/><circle cx="50" cy="40" r="10.5"/><circle cx="72" cy="40" r="10.5"/><circle cx="39" cy="60" r="10.5"/><circle cx="61" cy="60" r="10.5"/><circle cx="50" cy="80" r="10.5"/></svg>
+        <span>Grape</span>
+      </a>
+      <ul class="gnav-links" id="gnav-links">
+        <li><a href="index.html" data-nav="home">ホーム</a></li>
+        <li><a href="vine-pro.html" data-nav="vine">Vine Pro</a></li>
+        <li><a href="products.html" data-nav="products">製品</a></li>
+        <li><a href="about.html" data-nav="about">会社概要</a></li>
+        <li><a href="contact.html" data-nav="contact">お問い合わせ</a></li>
+      </ul>
+      <a class="gnav-cta" href="contact.html#form">購入相談</a>
+      <button class="gnav-toggle" type="button" aria-expanded="false" aria-controls="gnav-links" aria-label="メニューを開く"><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero" aria-labelledby="ab-title">
+      <div class="container">
+        <p class="eyebrow reveal">Grapeについて</p>
+        <h1 class="h-xl reveal" id="ab-title">一粒ずつ、<br><span class="grad-text">良いものを。</span></h1>
+        <p class="lead reveal">Grape株式会社は、学ぶ人とつくる人のためのデバイスをつくる、日本生まれのテクノロジー企業です。</p>
+      </div>
+    </section>
+
+    <section class="section-tight" aria-label="ミッション">
+      <div class="container">
+        <p class="scrub-text">ぶどうは、一粒ひと粒が集まって、ひとつの房になる。私たちの製品も同じです。ひとつひとつは小さくても、つながることで、あなたの毎日をもっと豊かにする。それが Grape という名前に込めた想いです。</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="val-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">大切にしていること</p>
+          <h2 class="h-l" id="val-title">3つの約束。</h2>
+        </div>
+        <div class="values">
+          <div class="value reveal"><span class="num grad-text">01</span><h3>シンプルであること</h3><p>説明書がなくても使える。機能を足すより、迷いを減らすことを選びます。</p></div>
+          <div class="value reveal" data-delay=".1"><span class="num grad-text">02</span><h3>長く使えること</h3><p>5年間のOSアップデートと、修理しやすい設計。買い替えなくていい製品を目指します。</p></div>
+          <div class="value reveal" data-delay=".2"><span class="num grad-text">03</span><h3>手が届くこと</h3><p>良い道具は、学生にこそ必要です。学割と下取りで、最初の一台を応援します。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="circle" aria-labelledby="ci-title" style="scroll-margin-top:60px">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">環境への取り組み</p>
+          <h2 class="h-l" id="ci-title">Grape Circle</h2>
+          <p class="lead">デザインから再資源化まで。製品の一生をひとつの輪として設計し、2030年までにサプライチェーン全体のカーボンニュートラルを目指します。</p>
+        </div>
+        <figure class="diagram reveal">
+          <img src="img/grape-circle.svg" alt="Grape Circle の図。01デザイン、02再生素材で製造、03長く使う、04下取り回収、05分解・再資源化 の5段階が輪になって循環している。" width="760" height="560" loading="lazy">
+          <figcaption>図：Grape Circle — 製品の一生を循環させるしくみ（オリジナル図版）</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section dark-2" aria-labelledby="msg-title">
+      <div class="container">
+        <h2 class="sr-only" id="msg-title">代表メッセージ</h2>
+        <div class="message">
+          <div class="message-img reveal"><img src="img/ceo.svg" alt="代表のイラスト" width="400" height="500" loading="lazy"></div>
+          <div class="reveal" data-delay=".1">
+            <p class="eyebrow">代表メッセージ</p>
+            <blockquote>「すごい技術」よりも、「毎日使いたくなる道具」を。</blockquote>
+            <p>大学の課題に追われながら、重いノートPCと充電の切れたスマートフォンを抱えて走り回っていた日々が、Grapeの原点です。私たちは、学ぶ人やつくる人の時間を1分でも多く生み出す道具をつくりたいと考えています。まだ小さな房ですが、一粒ずつ、誠実に育てていきます。</p>
+            <cite>Grape株式会社 代表取締役 CEO</cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="pf-title">
+      <div class="container">
+        <div class="section-head reveal"><p class="eyebrow">会社概要</p><h2 class="h-l" id="pf-title">Company Profile</h2></div>
+        <div class="profile reveal">
+          <dl>
+            <dt>会社名</dt><dd>Grape株式会社（Grape Inc.）※架空の企業です</dd>
+            <dt>設立</dt><dd>2024年4月1日</dd>
+            <dt>所在地</dt><dd>東京都港区（架空）</dd>
+            <dt>代表者</dt><dd>代表取締役 CEO</dd>
+            <dt>資本金</dt><dd>3億円</dd>
+            <dt>従業員数</dt><dd>128名（2026年11月現在）</dd>
+            <dt>事業内容</dt><dd>スマートフォン・ノートPC・ウェアラブル機器の企画・設計・販売<br>クラウドサービス「Grape Cloud」および保証サービス「Grape Care+」の運営</dd>
+            <dt>主な対象</dt><dd>大学生・専門学校生、若手クリエイター、教育機関</dd>
+            <dt>店舗</dt><dd>Grape Store 表参道、Grape オンラインストア（いずれも架空）</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-alt" id="history" aria-labelledby="hs-title" style="scroll-margin-top:60px">
+      <div class="container">
+        <div class="section-head reveal"><p class="eyebrow">沿革</p><h2 class="h-l" id="hs-title">あゆみ</h2></div>
+        <ol class="timeline">
+          <li class="reveal"><time datetime="2024-04">2024年4月</time><h3>大学の研究室から創業</h3><p>学生3人で、ワンルームの部屋からスタート。</p></li>
+          <li class="reveal"><time datetime="2025-03">2025年3月</time><h3>Grape Buds 発売</h3><p>最初の製品。クラウドファンディングで目標の12倍を達成。</p></li>
+          <li class="reveal"><time datetime="2025-10">2025年10月</time><h3>初代 Vine を発売</h3><p>再生アルミニウム100%の筐体を採用。</p></li>
+          <li class="reveal"><time datetime="2026-04">2026年4月</time><h3>Grape Store 表参道 オープン</h3><p>修理・下取りカウンターを併設した旗艦店。</p></li>
+          <li class="reveal"><time datetime="2026-11">2026年11月</time><h3>Vine Pro 発表</h3><p>自社設計の G1 チップを初搭載。</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section-tight" aria-label="お問い合わせ">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>一緒に、房を育てませんか。</h2>
+          <p>取材・法人導入・採用に関するお問い合わせは、こちらから。</p>
+          <div class="btn-row"><a class="btn btn-primary" href="contact.html#form">お問い合わせ</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-notes">
+        本サイトは講義課題として制作したものです。This site is created as a course exercise.<br>
+        Grape株式会社および掲載している製品・価格・仕様はすべて架空のものです。サイト内の画像・イラスト・3Dモデルはすべて自作です。
+      </div>
+      <div class="footer-cols">
+        <div><h4>製品</h4><ul><li><a href="vine-pro.html">Vine Pro</a></li><li><a href="products.html#vine">Vine</a></li><li><a href="products.html#book">GrapeBook Air</a></li><li><a href="products.html#buds">Grape Buds Pro</a></li><li><a href="products.html#band">Grape Band</a></li></ul></div>
+        <div><h4>サービス</h4><ul><li><a href="products.html#services">Grape Cloud</a></li><li><a href="products.html#services">Grape Care+</a></li><li><a href="products.html#services">学割</a></li></ul></div>
+        <div><h4>Grapeについて</h4><ul><li><a href="about.html">会社概要</a></li><li><a href="about.html#circle">環境への取り組み</a></li><li><a href="about.html#history">沿革</a></li></ul></div>
+        <div><h4>サポート</h4><ul><li><a href="contact.html">お問い合わせ</a></li><li><a href="contact.html#faq">よくある質問</a></li><li><a href="contact.html#form">購入相談</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© <span data-year>2026</span> Grape Inc.（架空の企業）</span><span>日本</span></div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/common.js"></script>
+</body>
+</html>

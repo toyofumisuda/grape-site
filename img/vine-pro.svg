@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <defs>
+    <linearGradient id="frame" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6a5590"/><stop offset=".45" stop-color="#2d2045"/><stop offset=".7" stop-color="#4a3870"/><stop offset="1" stop-color="#1c1430"/></linearGradient>
+    <linearGradient id="backg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4a3a6d"/><stop offset="1" stop-color="#2a1e42"/></linearGradient>
+    <radialGradient id="lens" cx=".42" cy=".38" r=".6"><stop offset="0" stop-color="#3b2d78"/><stop offset=".35" stop-color="#0d0a1c"/><stop offset=".8" stop-color="#050408"/><stop offset="1" stop-color="#3a3a44"/></radialGradient>
+    <linearGradient id="scr" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#3b1a8f"/><stop offset=".5" stop-color="#c040ff"/><stop offset="1" stop-color="#3d7bff"/></linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="9"/></filter>
+    <filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#2a0f63" flood-opacity=".28"/></filter>
+    <clipPath id="sc"><rect x="276" y="92" width="150" height="320" rx="24"/></clipPath>
+  </defs>
+  <!-- back view -->
+  <g filter="url(#sh)" transform="rotate(-8 170 250)">
+    <rect x="80" y="70" width="176" height="364" rx="36" fill="url(#frame)"/>
+    <rect x="85" y="75" width="166" height="354" rx="31" fill="url(#backg)"/>
+    <rect x="96" y="86" width="84" height="84" rx="22" fill="#3e2f60" stroke="#6b5a92" stroke-width="1.5"/>
+    <circle cx="117" cy="107" r="15" fill="url(#lens)" stroke="#7d6ca8" stroke-width="3"/>
+    <circle cx="117" cy="149" r="15" fill="url(#lens)" stroke="#7d6ca8" stroke-width="3"/>
+    <circle cx="157" cy="128" r="15" fill="url(#lens)" stroke="#7d6ca8" stroke-width="3"/>
+    <circle cx="160" cy="101" r="5" fill="#efe8d6"/>
+    <g fill="#9c88c9" opacity=".9" transform="translate(150 230) scale(.5)"><circle cx="-22" cy="0" r="10.5"/><circle cx="0" cy="0" r="10.5"/><circle cx="22" cy="0" r="10.5"/><circle cx="-11" cy="20" r="10.5"/><circle cx="11" cy="20" r="10.5"/><circle cx="0" cy="40" r="10.5"/><rect x="-2.5" y="-28" width="5" height="16" rx="2.5"/></g>
+  </g>
+  <!-- front view -->
+  <g filter="url(#sh)">
+    <rect x="266" y="82" width="170" height="340" rx="34" fill="url(#frame)"/>
+    <rect x="271" y="87" width="160" height="330" rx="29" fill="#050308"/>
+    <g clip-path="url(#sc)">
+      <rect x="276" y="92" width="150" height="320" fill="#06030c"/>
+      <path d="M250 400 C 420 380, 470 300, 350 270 S 240 160, 460 120" fill="none" stroke="url(#scr)" stroke-width="60" opacity=".55" filter="url(#blur)"/>
+      <path d="M250 400 C 420 380, 470 300, 350 270 S 240 160, 460 120" fill="none" stroke="url(#scr)" stroke-width="14" opacity=".9"/>
+      <path d="M262 415 C 430 392, 482 300, 362 262 S 250 150, 470 108" fill="none" stroke="#ff9ad8" stroke-width="3" opacity=".7"/>
+      <text x="351" y="142" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-weight="300" font-size="38" fill="#fff">10:08</text>
+      <text x="351" y="114" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#ddd">11月12日 木曜日</text>
+    </g>
+    <rect x="331" y="98" width="40" height="11" rx="5.5" fill="#000"/>
+  </g>
+</svg>

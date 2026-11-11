@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>【実習】製品ラインナップ — Grape</title>
+  <meta name="description" content="【実習】架空企業Grapeの製品一覧。Vine Pro、Vine、GrapeBook Air、Grape Buds Pro、Grape Band と、Grape Cloud などのサービスを紹介します。">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="products">
+  <div class="practice-bar" role="note">本サイトは講義課題として制作したものです。<span class="en">This site is created as a course exercise.</span></div>
+
+  <header class="gnav" id="gnav">
+    <nav class="gnav-inner" aria-label="グローバルナビゲーション">
+      <a class="gnav-logo" href="index.html" aria-label="Grape ホーム">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M52 15c8-11 24-12 33-4-8 9-22 11-33 4z"/><rect x="47.5" y="12" width="5" height="16" rx="2.5"/><circle cx="28" cy="40" r="10.5"/><circle cx="50" cy="40" r="10.5"/><circle cx="72" cy="40" r="10.5"/><circle cx="39" cy="60" r="10.5"/><circle cx="61" cy="60" r="10.5"/><circle cx="50" cy="80" r="10.5"/></svg>
+        <span>Grape</span>
+      </a>
+      <ul class="gnav-links" id="gnav-links">
+        <li><a href="index.html" data-nav="home">ホーム</a></li>
+        <li><a href="vine-pro.html" data-nav="vine">Vine Pro</a></li>
+        <li><a href="products.html" data-nav="products">製品</a></li>
+        <li><a href="about.html" data-nav="about">会社概要</a></li>
+        <li><a href="contact.html" data-nav="contact">お問い合わせ</a></li>
+      </ul>
+      <a class="gnav-cta" href="contact.html#form">購入相談</a>
+      <button class="gnav-toggle" type="button" aria-expanded="false" aria-controls="gnav-links" aria-label="メニューを開く"><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero" aria-labelledby="pr-title">
+      <div class="container">
+        <p class="eyebrow reveal">製品</p>
+        <h1 class="h-xl reveal" id="pr-title">すべてが、<br><span class="grad-text">ひと房</span>に。</h1>
+        <p class="lead reveal">学ぶ、つくる、つながる。毎日を軽やかにする5つの製品と、それをつなぐサービス。</p>
+        <nav class="chip-nav reveal" aria-label="製品へ移動">
+          <a href="#vine-pro">Vine Pro</a><a href="#vine">Vine</a><a href="#book">GrapeBook Air</a><a href="#buds">Grape Buds Pro</a><a href="#band">Grape Band</a><a href="#services">サービス</a>
+        </nav>
+      </div>
+    </section>
+
+    <section aria-label="製品一覧">
+      <div class="container">
+        <article class="product" id="vine-pro">
+          <div class="product-img reveal" style="background:#0b0613"><img src="img/vine-pro.svg" alt="Vine Pro の背面と前面のイラスト" width="500" height="500" loading="lazy"></div>
+          <div class="reveal" data-delay=".1">
+            <span class="tag">新登場</span>
+            <h2>Vine Pro</h2>
+            <p class="lead">プロのカメラを、ポケットに。</p>
+            <ul><li>48MP トリプルカメラ・5倍光学ズーム</li><li>G1 チップとオンデバイスAI</li><li>厚さ7.4mm・171gの再生アルミボディ</li></ul>
+            <p class="price"><b>¥139,800</b>（税込）から</p>
+            <div class="btn-row"><a class="btn btn-primary" href="vine-pro.html">詳しく見る</a><a class="btn btn-ghost" href="contact.html#form">購入相談</a></div>
+          </div>
+        </article>
+
+        <article class="product rev" id="vine">
+          <div class="product-img reveal"><img src="img/vine.svg" alt="3色の Vine のイラスト" width="500" height="500" loading="lazy"></div>
+          <div class="reveal" data-delay=".1">
+            <h2>Vine</h2>
+            <p class="lead">はじめての、ちょうどいい。</p>
+            <ul><li>5色のパステルカラー</li><li>48MP デュアルカメラ</li><li>最大22時間のビデオ再生</li></ul>
+            <p class="price"><b>¥89,800</b>（税込）から</p>
+            <div class="btn-row"><a class="btn btn-primary" href="contact.html#form">購入相談</a></div>
+          </div>
+        </article>
+
+        <article class="product" id="book">
+          <div class="product-img reveal"><img src="img/grapebook.svg" alt="GrapeBook Air のイラスト" width="500" height="360" loading="lazy"></div>
+          <div class="reveal" data-delay=".1">
+            <h2>GrapeBook Air</h2>
+            <p class="lead">1.1kg。一日中、どこへでも。</p>
+            <ul><li>13.6インチ Lumina ディスプレイ</li><li>ファンレスで静か、最大20時間駆動</li><li>Vine とのコピー&amp;ペースト・画面ミラーリング</li></ul>
+            <p class="price"><b>¥148,800</b>（税込）から</p>
+            <div class="btn-row"><a class="btn btn-primary" href="contact.html#form">購入相談</a></div>
+          </div>
+        </article>
+
+        <article class="product rev" id="buds">
+          <div class="product-img reveal"><img src="img/buds.svg" alt="Grape Buds Pro のイラスト" width="500" height="400" loading="lazy"></div>
+          <div class="reveal" data-delay=".1">
+            <h2>Grape Buds Pro</h2>
+            <p class="lead">静けさを、耳に。</p>
+            <ul><li>アクティブノイズキャンセリング</li><li>空間オーディオとリアルタイム翻訳</li><li>ケース込みで最大36時間再生</li></ul>
+            <p class="price"><b>¥32,800</b>（税込）</p>
+            <div class="btn-row"><a class="btn btn-primary" href="contact.html#form">購入相談</a></div>
+          </div>
+        </article>
+
+        <article class="product" id="band">
+          <div class="product-img reveal"><img src="img/band.svg" alt="Grape Band のイラスト" width="400" height="460" loading="lazy" style="max-height:80%"></div>
+          <div class="reveal" data-delay=".1">
+            <h2>Grape Band</h2>
+            <p class="lead">からだの声を、聞こう。</p>
+            <ul><li>心拍・睡眠・ストレスを24時間計測</li><li>最大7日間のバッテリー</li><li>授業中は通知を自動でおやすみ</li></ul>
+            <p class="price"><b>¥39,800</b>（税込）</p>
+            <div class="btn-row"><a class="btn btn-primary" href="contact.html#form">購入相談</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section bg-alt" id="services" aria-labelledby="sv-title" style="scroll-margin-top:60px">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">サービス</p>
+          <h2 class="h-l" id="sv-title">買ったあとも、ずっと。</h2>
+        </div>
+        <div class="service-grid">
+          <div class="service reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18a5 5 0 0 1-.6-9.96A6 6 0 0 1 18 8a4.5 4.5 0 0 1-.5 10z"/></svg></div>
+            <h3>Grape Cloud</h3>
+            <p>写真もノートも、すべてのGrape製品で自動同期。50GB 月額150円から。端末内で暗号化してから保存します。</p>
+          </div>
+          <div class="service reveal" data-delay=".1">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+            <h3>Grape Care+</h3>
+            <p>画面割れや水濡れも、何度でも定額で修理。最寄りのストアなら最短当日でお返しします。</p>
+          </div>
+          <div class="service reveal" data-delay=".2">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg></div>
+            <h3>学割</h3>
+            <p>学生・教職員なら対象製品が最大15%オフ。Grape Care+ 1年分もついてきます。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="tb-title">
+      <div class="container" style="max-width:1000px">
+        <div class="section-head reveal"><h2 class="h-m" id="tb-title">ひと目で比べる</h2></div>
+        <div class="table-scroll reveal">
+          <table class="lineup-table">
+            <thead><tr><th scope="col"><span class="sr-only">項目</span></th><th scope="col">Vine Pro</th><th scope="col">Vine</th><th scope="col">GrapeBook Air</th><th scope="col">Buds Pro</th><th scope="col">Band</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">価格</th><td>¥139,800〜</td><td>¥89,800〜</td><td>¥148,800〜</td><td>¥32,800</td><td>¥39,800</td></tr>
+              <tr><th scope="row">重さ</th><td>171g</td><td>165g</td><td>1.1kg</td><td>5.3g（片耳）</td><td>32g</td></tr>
+              <tr><th scope="row">バッテリー</th><td>29時間</td><td>22時間</td><td>20時間</td><td>36時間</td><td>7日間</td></tr>
+              <tr><th scope="row">学割</th><td>15%オフ</td><td>10%オフ</td><td>15%オフ</td><td>10%オフ</td><td>10%オフ</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight" aria-label="お問い合わせ">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>迷ったら、相談しよう。</h2>
+          <p>用途や予算を教えていただければ、あなたにぴったりの組み合わせをご提案します。</p>
+          <div class="btn-row"><a class="btn btn-primary" href="contact.html#form">購入相談をする</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-notes">
+        本サイトは講義課題として制作したものです。This site is created as a course exercise.<br>
+        Grape株式会社および掲載している製品・価格・仕様はすべて架空のものです。サイト内の画像・イラスト・3Dモデルはすべて自作です。
+      </div>
+      <div class="footer-cols">
+        <div><h4>製品</h4><ul><li><a href="vine-pro.html">Vine Pro</a></li><li><a href="products.html#vine">Vine</a></li><li><a href="products.html#book">GrapeBook Air</a></li><li><a href="products.html#buds">Grape Buds Pro</a></li><li><a href="products.html#band">Grape Band</a></li></ul></div>
+        <div><h4>サービス</h4><ul><li><a href="products.html#services">Grape Cloud</a></li><li><a href="products.html#services">Grape Care+</a></li><li><a href="products.html#services">学割</a></li></ul></div>
+        <div><h4>Grapeについて</h4><ul><li><a href="about.html">会社概要</a></li><li><a href="about.html#circle">環境への取り組み</a></li><li><a href="about.html#history">沿革</a></li></ul></div>
+        <div><h4>サポート</h4><ul><li><a href="contact.html">お問い合わせ</a></li><li><a href="contact.html#faq">よくある質問</a></li><li><a href="contact.html#form">購入相談</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© <span data-year>2026</span> Grape Inc.（架空の企業）</span><span>日本</span></div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/common.js"></script>
+</body>
+</html>

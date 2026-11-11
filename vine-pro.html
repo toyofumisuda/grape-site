@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>【実習】Vine Pro — Grape</title>
+  <meta name="description" content="【実習】架空企業Grapeのスマートフォン「Vine Pro」の製品ページ。カメラ、ディスプレイ、G1チップ、仕様、価格を紹介します。">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="importmap">
+  { "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  } }
+  </script>
+</head>
+<body data-page="vine">
+  <div class="practice-bar" role="note">本サイトは講義課題として制作したものです。<span class="en">This site is created as a course exercise.</span></div>
+
+  <header class="gnav" id="gnav">
+    <nav class="gnav-inner" aria-label="グローバルナビゲーション">
+      <a class="gnav-logo" href="index.html" aria-label="Grape ホーム">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M52 15c8-11 24-12 33-4-8 9-22 11-33 4z"/><rect x="47.5" y="12" width="5" height="16" rx="2.5"/><circle cx="28" cy="40" r="10.5"/><circle cx="50" cy="40" r="10.5"/><circle cx="72" cy="40" r="10.5"/><circle cx="39" cy="60" r="10.5"/><circle cx="61" cy="60" r="10.5"/><circle cx="50" cy="80" r="10.5"/></svg>
+        <span>Grape</span>
+      </a>
+      <ul class="gnav-links" id="gnav-links">
+        <li><a href="index.html" data-nav="home">ホーム</a></li>
+        <li><a href="vine-pro.html" data-nav="vine">Vine Pro</a></li>
+        <li><a href="products.html" data-nav="products">製品</a></li>
+        <li><a href="about.html" data-nav="about">会社概要</a></li>
+        <li><a href="contact.html" data-nav="contact">お問い合わせ</a></li>
+      </ul>
+      <a class="gnav-cta" href="contact.html#form">購入相談</a>
+      <button class="gnav-toggle" type="button" aria-expanded="false" aria-controls="gnav-links" aria-label="メニューを開く"><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="viewer-hero" aria-labelledby="vp-title">
+      <div class="container">
+        <p class="eyebrow reveal" style="color:#ff9ad8">新登場</p>
+        <h1 id="vp-title" class="reveal"><span class="grad-text">Vine Pro</span></h1>
+        <p class="lead reveal">熟した、テクノロジー。</p>
+        <div class="viewer" id="viewer" aria-label="Vine Pro の3Dモデル。ドラッグで回転できます。" role="img">
+          <img id="viewer-fallback" hidden src="img/vine-pro.svg" alt="Vine Pro のイラスト" style="height:100%;margin:0 auto">
+        </div>
+        <p class="viewer-hint">ドラッグして360°回転</p>
+        <div class="swatches" role="group" aria-label="カラーを選ぶ">
+          <button class="swatch" type="button" data-color="grape" aria-pressed="true" style="background:#3b2a5c" aria-label="ディープグレープ"></button>
+          <button class="swatch" type="button" data-color="midnight" aria-pressed="false" style="background:#26262b" aria-label="ミッドナイト"></button>
+          <button class="swatch" type="button" data-color="silver" aria-pressed="false" style="background:#d4d4da" aria-label="シルバーミスト"></button>
+          <button class="swatch" type="button" data-color="rose" aria-pressed="false" style="background:#d9b2b6" aria-label="ロゼ"></button>
+        </div>
+        <p class="swatch-name" id="swatch-name" aria-live="polite">ディープグレープ</p>
+        <p class="price-line"><b>¥139,800</b>（税込）から ／ 学割価格 ¥118,830から</p>
+        <div class="btn-row" style="margin-top:22px">
+          <a class="btn btn-primary" href="contact.html#form">購入相談をする</a>
+          <a class="btn btn-ghost inv" href="#specs">仕様を見る</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" aria-labelledby="hl-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="h-l" id="hl-title">ハイライト。</h2>
+        </div>
+        <div class="bento">
+          <article class="tile span-4 reveal" style="background:linear-gradient(140deg,#2a1450,#120a22)">
+            <p class="eyebrow">G1 チップ</p>
+            <h3>3nmの頭脳が、<br>すべてを速く。</h3>
+            <p class="tile-sub">前世代比でCPUは最大30%、GPUは最大40%高速に。オンデバイスAI「Grape Intelligence」が、写真の整理や文字起こしを端末の中だけで行います。</p>
+            <p class="big-num grad-text">+<span data-count="40">40</span>%</p>
+          </article>
+          <article class="tile span-2 center reveal" data-delay=".1">
+            <p class="eyebrow">バッテリー</p>
+            <h3>朝から、<br>次の朝まで。</h3>
+            <p class="big-num"><span data-count="29">29</span><small style="font-size:.4em">時間</small></p>
+            <p class="tile-sub">ビデオ再生（最大）</p>
+          </article>
+          <article class="tile span-2 center reveal">
+            <p class="eyebrow">耐久性</p>
+            <h3>落としても、<br>濡れても。</h3>
+            <p class="big-num">IP68</p>
+            <p class="tile-sub">水深6メートルで最大30分</p>
+          </article>
+          <article class="tile span-4 reveal" data-delay=".1" style="background:linear-gradient(140deg,#1a1a1f,#2b1238)">
+            <p class="eyebrow">ディスプレイ</p>
+            <h3>真昼の光の下でも、<br>くっきり。</h3>
+            <p class="tile-sub">6.3インチ Lumina OLED。1〜120Hzの可変リフレッシュレートで、なめらかさと省電力を両立。</p>
+            <p class="big-num grad-text"><span data-count="3000">3,000</span><small style="font-size:.35em"> ニト</small></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-2" aria-labelledby="cam-title">
+      <div class="container">
+        <div class="feature-row">
+          <div class="reveal">
+            <p class="eyebrow">カメラ</p>
+            <h2 class="h-l" id="cam-title">夜も、昼も。<br>見たままを、そのまま。</h2>
+            <p>48MPメイン、48MP超広角、12MP 5倍望遠のトリプルカメラ。Grape Lens エンジンが1枚ごとに9枚の画像を合成し、暗い場所でもノイズの少ない写真に仕上げます。</p>
+          </div>
+          <div class="reveal" data-delay=".15">
+            <div class="stats" style="grid-template-columns:1fr 1fr;text-align:left;gap:40px">
+              <div class="stat"><b><span data-count="48">48</span>MP</b><span>メインカメラ</span></div>
+              <div class="stat"><b><span data-count="5">5</span>×</b><span>光学ズーム</span></div>
+              <div class="stat"><b>4K<small style="font-size:.4em">120fps</small></b><span>ドルビービジョン動画</span></div>
+              <div class="stat"><b><span data-count="9">9</span>枚</b><span>合成による夜景モード</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="feature-row rev">
+          <div class="reveal">
+            <p class="eyebrow">デザイン</p>
+            <h2 class="h-l">驚くほど、<br>薄く、軽く。</h2>
+            <p>厚さ7.4mm、重さ171g。再生アルミニウム100%のユニボディと、背面のマットガラス。4つのカラーは、ぶどう畑の朝から夜までをイメージしました。</p>
+          </div>
+          <div class="reveal" data-delay=".15"><img src="img/vine-pro.svg" alt="Vine Pro の背面と前面のイラスト" width="500" height="500" loading="lazy" data-parallax></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="specs" aria-labelledby="spec-title" style="scroll-margin-top:60px">
+      <div class="container" style="max-width:920px">
+        <div class="section-head reveal"><h2 class="h-l" id="spec-title">仕様</h2></div>
+        <table class="spec-table reveal">
+          <tbody>
+            <tr><th scope="row">価格（税込）</th><td>128GB ¥139,800 ／ 256GB ¥159,800 ／ 512GB ¥189,800</td></tr>
+            <tr><th scope="row">カラー</th><td>ディープグレープ、ミッドナイト、シルバーミスト、ロゼ</td></tr>
+            <tr><th scope="row">サイズ・重量</th><td>高さ 149.4mm × 幅 72.4mm × 厚さ 7.4mm ／ 171g</td></tr>
+            <tr><th scope="row">ディスプレイ</th><td>6.3インチ Lumina OLED、2622×1206ピクセル、1〜120Hz、最大3,000ニト</td></tr>
+            <tr><th scope="row">チップ</th><td>G1 チップ（3nm、6コアCPU、6コアGPU、16コア Neural Engine）</td></tr>
+            <tr><th scope="row">カメラ</th><td>48MP メイン ／ 48MP 超広角 ／ 12MP 5倍望遠 ／ 前面 24MP</td></tr>
+            <tr><th scope="row">バッテリー</th><td>ビデオ再生 最大29時間、30分で50%の高速充電、ワイヤレス充電</td></tr>
+            <tr><th scope="row">耐久性</th><td>IP68 等級の防塵・防水</td></tr>
+            <tr><th scope="row">端子・通信</th><td>USB-C（USB 3）、5G、Wi-Fi 7、Bluetooth 5.4</td></tr>
+            <tr><th scope="row">環境</th><td>筐体に再生アルミニウム100%、パッケージはプラスチック不使用</td></tr>
+          </tbody>
+        </table>
+        <p class="small muted" style="margin-top:20px">※ 掲載している製品・仕様・価格はすべて架空のものです。</p>
+      </div>
+    </section>
+
+    <section class="section bg-alt" aria-labelledby="cmp-title">
+      <div class="container" style="max-width:980px">
+        <div class="section-head reveal"><h2 class="h-l" id="cmp-title">あなたに合うのは、どっち？</h2></div>
+        <div class="compare">
+          <div class="compare-col reveal">
+            <img src="img/vine-pro.svg" alt="" width="220" height="220" loading="lazy">
+            <h3>Vine Pro</h3>
+            <p class="price">¥139,800から</p>
+            <ul><li><b>6.3インチ Lumina OLED</b>1〜120Hz</li><li><b>トリプルカメラ</b>5倍望遠つき</li><li><b>G1 チップ</b>Pro 向けGPU</li><li><b>最大29時間</b>ビデオ再生</li></ul>
+            <a class="btn btn-primary" href="contact.html#form">購入相談</a>
+          </div>
+          <div class="compare-col reveal" data-delay=".1">
+            <img src="img/vine.svg" alt="" width="220" height="220" loading="lazy">
+            <h3>Vine</h3>
+            <p class="price">¥89,800から</p>
+            <ul><li><b>6.1インチ OLED</b>60Hz</li><li><b>デュアルカメラ</b>48MP メイン</li><li><b>G1 チップ</b>5コアGPU</li><li><b>最大22時間</b>ビデオ再生</li></ul>
+            <a class="btn btn-ghost" href="products.html#vine">詳しく見る</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight" aria-label="購入のご案内">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>Vine Pro を、手に取ろう。</h2>
+          <p>オンラインでの購入相談、または Grape Store 表参道（架空）で実機をお試しいただけます。</p>
+          <div class="btn-row"><a class="btn btn-primary" href="contact.html#form">購入相談をする</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-notes">
+        本サイトは講義課題として制作したものです。This site is created as a course exercise.<br>
+        Grape株式会社および掲載している製品・価格・仕様はすべて架空のものです。サイト内の画像・イラスト・3Dモデルはすべて自作です。
+      </div>
+      <div class="footer-cols">
+        <div><h4>製品</h4><ul><li><a href="vine-pro.html">Vine Pro</a></li><li><a href="products.html#vine">Vine</a></li><li><a href="products.html#book">GrapeBook Air</a></li><li><a href="products.html#buds">Grape Buds Pro</a></li><li><a href="products.html#band">Grape Band</a></li></ul></div>
+        <div><h4>サービス</h4><ul><li><a href="products.html#services">Grape Cloud</a></li><li><a href="products.html#services">Grape Care+</a></li><li><a href="products.html#services">学割</a></li></ul></div>
+        <div><h4>Grapeについて</h4><ul><li><a href="about.html">会社概要</a></li><li><a href="about.html#circle">環境への取り組み</a></li><li><a href="about.html#history">沿革</a></li></ul></div>
+        <div><h4>サポート</h4><ul><li><a href="contact.html">お問い合わせ</a></li><li><a href="contact.html#faq">よくある質問</a></li><li><a href="contact.html#form">購入相談</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© <span data-year>2026</span> Grape Inc.（架空の企業）</span><span>日本</span></div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/common.js"></script>
+  <script type="module" src="js/viewer.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 460">
+  <defs>
+    <linearGradient id="strap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7b3fe4"/><stop offset="1" stop-color="#4b1fa8"/></linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5a4a7c"/><stop offset=".5" stop-color="#2a2140"/><stop offset="1" stop-color="#4a3b69"/></linearGradient>
+    <filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#2a0f63" flood-opacity=".25"/></filter>
+  </defs>
+  <path d="M140 20 H260 L250 140 H150 Z" fill="url(#strap)"/>
+  <path d="M150 320 H250 L260 440 H140 Z" fill="url(#strap)"/>
+  <g fill="#3a1890" opacity=".5"><circle cx="200" cy="380" r="4"/><circle cx="200" cy="405" r="4"/></g>
+  <g filter="url(#sh)">
+    <rect x="105" y="110" width="190" height="240" rx="56" fill="url(#body)"/>
+    <rect x="114" y="119" width="172" height="222" rx="48" fill="#000"/>
+    <circle cx="200" cy="230" r="66" fill="none" stroke="#ff4fa3" stroke-width="13" stroke-dasharray="320 420" stroke-linecap="round" transform="rotate(-90 200 230)"/>
+    <circle cx="200" cy="230" r="48" fill="none" stroke="#a3ff5c" stroke-width="13" stroke-dasharray="230 302" stroke-linecap="round" transform="rotate(-90 200 230)"/>
+    <circle cx="200" cy="230" r="30" fill="none" stroke="#4fd8ff" stroke-width="13" stroke-dasharray="150 189" stroke-linecap="round" transform="rotate(-90 200 230)"/>
+    <rect x="295" y="190" width="10" height="38" rx="5" fill="#6a5a8e"/>
+    <text x="200" y="160" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#fff">10:08</text>
+  </g>
+</svg>

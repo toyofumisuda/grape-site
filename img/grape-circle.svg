@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" font-family="Inter, 'Noto Sans JP', 'Hiragino Sans', sans-serif">
+  <defs>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b28cff"/><stop offset=".5" stop-color="#d24dff"/><stop offset="1" stop-color="#ff7ac6"/></linearGradient>
+    <radialGradient id="core" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#5b2ad0"/><stop offset="1" stop-color="#2a0f63"/></radialGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#d24dff"/></marker>
+  </defs>
+  <circle cx="380" cy="280" r="190" fill="none" stroke="url(#ring)" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round"/>
+  <g fill="none" stroke="#d24dff" stroke-width="3" marker-end="url(#arr)" opacity=".9">
+    <path d="M436 99 A190 190 0 0 1 545 186"/>
+    <path d="M568 318 A190 190 0 0 1 498 430"/>
+    <path d="M323 461 A190 190 0 0 1 222 386"/>
+    <path d="M190 268 A190 190 0 0 1 252 140"/>
+    <path d="M300 104 A190 190 0 0 1 330 96"/>
+  </g>
+  <circle cx="380" cy="280" r="96" fill="url(#core)"/>
+  <g fill="#fff" transform="translate(380 250) scale(.62)"><circle cx="-22" cy="0" r="10.5"/><circle cx="0" cy="0" r="10.5"/><circle cx="22" cy="0" r="10.5"/><circle cx="-11" cy="20" r="10.5"/><circle cx="11" cy="20" r="10.5"/><circle cx="0" cy="40" r="10.5"/><rect x="-2.5" y="-30" width="5" height="16" rx="2.5"/></g>
+  <text x="380" y="315" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">Grape Circle</text>
+  <text x="380" y="338" text-anchor="middle" fill="#d8ccff" font-size="13">ものづくりの循環</text>
+  <g font-size="17" font-weight="700" fill="#fff" text-anchor="middle">
+    <g transform="translate(380 90)"><circle r="44" fill="#1a1a1f" stroke="#b28cff" stroke-width="2"/><text y="-2">01</text><text y="18" font-size="14" font-weight="500" fill="#e6dcff">デザイン</text></g>
+    <g transform="translate(560 220)"><circle r="44" fill="#1a1a1f" stroke="#c46bff" stroke-width="2"/><text y="-2">02</text><text y="18" font-size="14" font-weight="500" fill="#e6dcff">再生素材で製造</text></g>
+    <g transform="translate(492 435)"><circle r="44" fill="#1a1a1f" stroke="#d24dff" stroke-width="2"/><text y="-2">03</text><text y="18" font-size="14" font-weight="500" fill="#e6dcff">長く使う</text></g>
+    <g transform="translate(268 435)"><circle r="44" fill="#1a1a1f" stroke="#e85fd8" stroke-width="2"/><text y="-2">04</text><text y="18" font-size="14" font-weight="500" fill="#e6dcff">下取り回収</text></g>
+    <g transform="translate(200 220)"><circle r="44" fill="#1a1a1f" stroke="#ff7ac6" stroke-width="2"/><text y="-2">05</text><text y="18" font-size="14" font-weight="500" fill="#e6dcff">分解・再資源化</text></g>
+  </g>
+  <g font-size="12.5" fill="#a1a1a6" text-anchor="middle">
+    <text x="380" y="30">修理しやすい構造を最初から設計</text>
+    <text x="680" y="210">再生アルミ100%・</text><text x="680" y="228">再生レアアース</text>
+    <text x="600" y="510">5年間のOSアップデート</text>
+    <text x="160" y="510">どのメーカーの端末も回収</text>
+    <text x="80" y="210">ロボットで分解し</text><text x="80" y="228">素材を次の製品へ</text>
+  </g>
+</svg>

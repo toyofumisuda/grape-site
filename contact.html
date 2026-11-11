@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>【実習】お問い合わせ・購入相談 — Grape</title>
+  <meta name="description" content="【実習】架空企業Grapeへのお問い合わせ・購入相談ページ。よくある質問も掲載しています。">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+  <div class="practice-bar" role="note">本サイトは講義課題として制作したものです。<span class="en">This site is created as a course exercise.</span></div>
+
+  <header class="gnav" id="gnav">
+    <nav class="gnav-inner" aria-label="グローバルナビゲーション">
+      <a class="gnav-logo" href="index.html" aria-label="Grape ホーム">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M52 15c8-11 24-12 33-4-8 9-22 11-33 4z"/><rect x="47.5" y="12" width="5" height="16" rx="2.5"/><circle cx="28" cy="40" r="10.5"/><circle cx="50" cy="40" r="10.5"/><circle cx="72" cy="40" r="10.5"/><circle cx="39" cy="60" r="10.5"/><circle cx="61" cy="60" r="10.5"/><circle cx="50" cy="80" r="10.5"/></svg>
+        <span>Grape</span>
+      </a>
+      <ul class="gnav-links" id="gnav-links">
+        <li><a href="index.html" data-nav="home">ホーム</a></li>
+        <li><a href="vine-pro.html" data-nav="vine">Vine Pro</a></li>
+        <li><a href="products.html" data-nav="products">製品</a></li>
+        <li><a href="about.html" data-nav="about">会社概要</a></li>
+        <li><a href="contact.html" data-nav="contact">お問い合わせ</a></li>
+      </ul>
+      <a class="gnav-cta" href="contact.html#form">購入相談</a>
+      <button class="gnav-toggle" type="button" aria-expanded="false" aria-controls="gnav-links" aria-label="メニューを開く"><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero" aria-labelledby="ct-title" style="padding-bottom:40px">
+      <div class="container">
+        <p class="eyebrow reveal">お問い合わせ</p>
+        <h1 class="h-xl reveal" id="ct-title">なんでも、<span class="grad-text">聞いてください。</span></h1>
+        <p class="lead reveal">購入相談、法人導入、取材のご依頼まで。2営業日以内にお返事します。</p>
+      </div>
+    </section>
+
+    <section class="section-tight bg-alt" aria-label="お問い合わせフォーム">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="form-card reveal" id="form">
+            <form id="contact-form" novalidate>
+              <h2>お問い合わせフォーム</h2>
+              <p class="muted small">※ 本フォームは講義課題用のデモです。入力内容はどこにも送信・保存されません。</p>
+
+              <fieldset class="field">
+                <legend>お問い合わせの種類<span class="req">必須</span></legend>
+                <div class="radio-group">
+                  <label><input type="radio" name="type" value="buy" checked><span>購入相談</span></label>
+                  <label><input type="radio" name="type" value="biz"><span>法人・教育機関</span></label>
+                  <label><input type="radio" name="type" value="press"><span>取材</span></label>
+                  <label><input type="radio" name="type" value="other"><span>その他</span></label>
+                </div>
+              </fieldset>
+
+              <div class="field">
+                <label for="product">気になる製品</label>
+                <select id="product" name="product">
+                  <option value="">選択してください</option>
+                  <option>Vine Pro</option><option>Vine</option><option>GrapeBook Air</option><option>Grape Buds Pro</option><option>Grape Band</option><option>まだ決めていない</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="name">お名前<span class="req">必須</span></label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+                <p class="err">お名前を入力してください。</p>
+              </div>
+              <div class="field">
+                <label for="email">メールアドレス<span class="req">必須</span></label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+                <p class="err">正しいメールアドレスを入力してください。</p>
+              </div>
+              <div class="field">
+                <label for="msg">お問い合わせ内容<span class="req">必須</span></label>
+                <textarea id="msg" name="msg" required placeholder="例：大学の授業で動画編集をするので、Vine Pro と GrapeBook Air のどちらが合うか知りたいです。"></textarea>
+                <p class="err">お問い合わせ内容を入力してください。</p>
+              </div>
+              <div class="field">
+                <label class="check"><input type="checkbox" id="agree" required> 個人情報の取り扱い（デモのため保存されません）に同意します</label>
+                <p class="err">同意にチェックしてください。</p>
+              </div>
+              <button class="btn btn-primary" type="submit">送信する</button>
+            </form>
+            <div class="thanks" role="status" aria-live="polite">
+              <img src="img/thanks.svg" alt="" width="72" height="72" style="margin:0 auto 20px">
+              <h2>ありがとうございました。</h2>
+              <p class="muted" style="margin-top:10px">内容を受け付けました（デモのため実際には送信されていません）。</p>
+              <p style="margin-top:24px"><a class="link-more" href="index.html">ホームへ戻る</a></p>
+            </div>
+          </div>
+
+          <aside>
+            <div class="side-card reveal">
+              <h3>Grape Store 表参道</h3>
+              <p>全製品を実際に試せます。修理・下取りカウンターも併設。<br>10:00〜21:00（年中無休）※架空の店舗です</p>
+            </div>
+            <div class="side-card reveal" data-delay=".1">
+              <h3>チャットで相談</h3>
+              <p>スペシャリストが製品選びをお手伝いします。平日 9:00〜20:00</p>
+            </div>
+            <div class="side-card reveal" data-delay=".2">
+              <h3>学割について</h3>
+              <p>学生証の画像をご用意ください。対象製品が最大15%オフになります。</p>
+              <p style="margin-top:10px"><a class="link-more" href="products.html#services">詳しく見る</a></p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faq-title" style="scroll-margin-top:60px">
+      <div class="container">
+        <div class="section-head reveal"><h2 class="h-l" id="faq-title">よくある質問</h2></div>
+        <div class="faq reveal">
+          <details><summary>学割はどの製品に使えますか？</summary><p>Vine Pro と GrapeBook Air は15%オフ、Vine・Grape Buds Pro・Grape Band は10%オフになります。</p></details>
+          <details><summary>他社のスマートフォンからデータを移せますか？</summary><p>はい。「Grape Move」アプリを使えば、写真・連絡先・メッセージをケーブル1本で移行できます。</p></details>
+          <details><summary>古い端末の下取りはできますか？</summary><p>メーカーを問わず回収し、状態に応じて最大4万円を割り引きます。回収した端末は Grape Circle で再資源化します。</p></details>
+          <details><summary>修理にはどれくらいかかりますか？</summary><p>Grape Store なら画面交換は最短当日。配送修理は通常3〜5営業日です。</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-notes">
+        本サイトは講義課題として制作したものです。This site is created as a course exercise.<br>
+        Grape株式会社および掲載している製品・価格・仕様はすべて架空のものです。サイト内の画像・イラスト・3Dモデルはすべて自作です。
+      </div>
+      <div class="footer-cols">
+        <div><h4>製品</h4><ul><li><a href="vine-pro.html">Vine Pro</a></li><li><a href="products.html#vine">Vine</a></li><li><a href="products.html#book">GrapeBook Air</a></li><li><a href="products.html#buds">Grape Buds Pro</a></li><li><a href="products.html#band">Grape Band</a></li></ul></div>
+        <div><h4>サービス</h4><ul><li><a href="products.html#services">Grape Cloud</a></li><li><a href="products.html#services">Grape Care+</a></li><li><a href="products.html#services">学割</a></li></ul></div>
+        <div><h4>Grapeについて</h4><ul><li><a href="about.html">会社概要</a></li><li><a href="about.html#circle">環境への取り組み</a></li><li><a href="about.html#history">沿革</a></li></ul></div>
+        <div><h4>サポート</h4><ul><li><a href="contact.html">お問い合わせ</a></li><li><a href="contact.html#faq">よくある質問</a></li><li><a href="contact.html#form">購入相談</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© <span data-year>2026</span> Grape Inc.（架空の企業）</span><span>日本</span></div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/common.js"></script>
+</body>
+</html>
