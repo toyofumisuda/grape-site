@@ -11,7 +11,7 @@ export const COLORS = {
 };
 
 /* ---------- helpers ---------- */
-function roundedRect(w, h, r) {
+export function roundedRect(w, h, r) {
   const s = new THREE.Shape();
   const x = -w / 2, y = -h / 2;
   s.moveTo(x + r, y);
@@ -26,7 +26,7 @@ function roundedRect(w, h, r) {
   return s;
 }
 
-function shapePlane(shape, seg = 32) {
+export function shapePlane(shape, seg = 32) {
   const g = new THREE.ShapeGeometry(shape, seg);
   g.computeBoundingBox();
   const { min, max } = g.boundingBox;
@@ -38,7 +38,7 @@ function shapePlane(shape, seg = 32) {
   return g;
 }
 
-function canvasTex(c) {
+export function canvasTex(c) {
   const t = new THREE.CanvasTexture(c);
   t.colorSpace = THREE.SRGBColorSpace;
   t.anisotropy = 8;
@@ -46,7 +46,7 @@ function canvasTex(c) {
 }
 
 /* Lock-screen wallpaper: flowing S-shaped ribbons of light */
-export function makeWallpaper() {
+export function makeWallpaper(hs = 0) {
   const c = document.createElement('canvas');
   c.width = 1000; c.height = 2160;
   const g = c.getContext('2d');
@@ -58,9 +58,9 @@ export function makeWallpaper() {
     for (let i = 0; i < 28; i++) {
       const t = i / 27;
       const grad = g.createLinearGradient(0, 2160, 1000, 0);
-      grad.addColorStop(0, `hsla(${255 + t * 30}, 95%, ${42 + t * 18}%, ${alpha})`);
-      grad.addColorStop(0.5, `hsla(${292 + t * 22}, 95%, 62%, ${alpha})`);
-      grad.addColorStop(1, `hsla(${215 + t * 25}, 95%, 60%, ${alpha})`);
+      grad.addColorStop(0, `hsla(${hs + 255 + t * 30}, 95%, ${42 + t * 18}%, ${alpha})`);
+      grad.addColorStop(0.5, `hsla(${hs + 292 + t * 22}, 95%, 62%, ${alpha})`);
+      grad.addColorStop(1, `hsla(${hs + 215 + t * 25}, 95%, 60%, ${alpha})`);
       g.strokeStyle = grad;
       g.lineWidth = (5 + t * 26) * wMul;
       const o = (t - 0.5) * 300;
@@ -90,7 +90,7 @@ export function makeWallpaper() {
   return canvasTex(c);
 }
 
-function makeLensTexture() {
+export function makeLensTexture() {
   const c = document.createElement('canvas');
   c.width = c.height = 256;
   const g = c.getContext('2d');
@@ -111,7 +111,7 @@ function makeLensTexture() {
   return canvasTex(c);
 }
 
-function makeLogoTexture() {
+export function makeLogoTexture() {
   const c = document.createElement('canvas');
   c.width = c.height = 256;
   const g = c.getContext('2d');
@@ -144,17 +144,18 @@ export function setupEnvironment(renderer, scene) {
 }
 
 /* ---------- the phone ---------- */
-export function createPhone({ color = COLORS.grape.hex } = {}) {
+export function createPhone({ color = COLORS.grape.hex, variant = 'pro', wallHue = 0 } = {}) {
+  const pro = variant === 'pro';
   const W0 = 0.7, H0 = 1.47, R = 0.105, B = 0.012, D = 0.05;
   const FRONT = D / 2 + B;            // 0.037
   const W = W0 + 2 * B;
   const group = new THREE.Group();
 
   const frameMat = new THREE.MeshPhysicalMaterial({
-    color, metalness: 1, roughness: 0.26, clearcoat: 0.6, clearcoatRoughness: 0.18, envMapIntensity: 1.3,
+    color, metalness: pro ? 1 : 0.85, roughness: pro ? 0.26 : 0.36, clearcoat: 0.6, clearcoatRoughness: 0.18, envMapIntensity: 1.3,
   });
   const backMat = new THREE.MeshPhysicalMaterial({
-    color, metalness: 0.35, roughness: 0.5, clearcoat: 0.4, clearcoatRoughness: 0.4, envMapIntensity: 1.0,
+    color, metalness: pro ? 0.35 : 0.1, roughness: pro ? 0.5 : 0.12, clearcoat: pro ? 0.4 : 1, clearcoatRoughness: pro ? 0.4 : 0.05, envMapIntensity: 1.0,
   });
   const plateauMat = new THREE.MeshPhysicalMaterial({
     color, metalness: 0.6, roughness: 0.18, clearcoat: 1, clearcoatRoughness: 0.05, envMapIntensity: 1.2,
@@ -175,7 +176,7 @@ export function createPhone({ color = COLORS.grape.hex } = {}) {
 
   const display = new THREE.Mesh(
     shapePlane(roundedRect(W0 - 0.045, H0 - 0.045, R - 0.022)),
-    new THREE.MeshBasicMaterial({ map: makeWallpaper(), toneMapped: false, color: 0xe6e6e6 })
+    new THREE.MeshBasicMaterial({ map: makeWallpaper(wallHue), toneMapped: false, color: 0xe6e6e6 })
   );
   display.position.z = FRONT + 0.0008;
   group.add(display);
@@ -211,6 +212,7 @@ export function createPhone({ color = COLORS.grape.hex } = {}) {
   logo.position.set(0, -0.02, 0.0012);
   back.add(logo);
 
+  if (pro) {
   const P = 0.33;
   const plateau = new THREE.Group();
   plateau.position.set(-(W0 / 2 - 0.035 - P / 2), H0 / 2 - 0.035 - P / 2, 0);
@@ -239,6 +241,29 @@ export function createPhone({ color = COLORS.grape.hex } = {}) {
   const sensor = new THREE.Mesh(new THREE.CircleGeometry(0.016, 32), blackGlass);
   sensor.position.set(0.085, -0.1, top + 0.0005);
   plateau.add(sensor);
+  } else {
+    const pill = new THREE.Group();
+    pill.position.set(-(W0 / 2 - 0.13), H0 / 2 - 0.2, 0);
+    back.add(pill);
+    const pg = new THREE.ExtrudeGeometry(roundedRect(0.15, 0.31, 0.075), {
+      depth: 0.004, bevelEnabled: true, bevelThickness: 0.003, bevelSize: 0.003, bevelSegments: 3, curveSegments: 24,
+    });
+    pill.add(new THREE.Mesh(pg, plateauMat));
+    const lensGlass = new THREE.MeshPhysicalMaterial({ map: makeLensTexture(), roughness: 0.04, clearcoat: 1 });
+    const ringGeo = new THREE.CylinderGeometry(0.06, 0.062, 0.016, 56);
+    ringGeo.rotateX(Math.PI / 2);
+    [0.075, -0.075].forEach((y) => {
+      const ring = new THREE.Mesh(ringGeo, frameMat);
+      ring.position.set(0, y, 0.015);
+      pill.add(ring);
+      const lens = new THREE.Mesh(new THREE.CircleGeometry(0.05, 56), lensGlass);
+      lens.position.set(0, y, 0.0232);
+      pill.add(lens);
+    });
+    const fl = new THREE.Mesh(new THREE.CircleGeometry(0.02, 32), new THREE.MeshStandardMaterial({ color: 0xf2ecd8, emissive: 0x332e22 }));
+    fl.position.set(0.12, 0.08, 0.001);
+    pill.add(fl);
+  }
 
   /* side buttons (object +x = right side when viewed from the front) */
   const btn = (len, y, side) => {
@@ -253,6 +278,7 @@ export function createPhone({ color = COLORS.grape.hex } = {}) {
   btn(0.12, 0.14, -1);  // volume -
 
   const mats = [frameMat, backMat, plateauMat];
+  if (!pro) logo.material.color.set(0xffffff);
   function setColor(hex, gsap) {
     const target = new THREE.Color(hex);
     mats.forEach((m) => {

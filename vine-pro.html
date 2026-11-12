@@ -121,7 +121,7 @@
             <h2 class="h-l">驚くほど、<br>薄く、軽く。</h2>
             <p>厚さ7.4mm、重さ171g。再生アルミニウム100%のユニボディと、背面のマットガラス。4つのカラーは、ぶどう畑の朝から夜までをイメージしました。</p>
           </div>
-          <div class="reveal" data-delay=".15"><img src="img/vine-pro.svg" alt="Vine Pro の背面と前面のイラスト" width="500" height="500" loading="lazy" data-parallax></div>
+          <div class="reveal" data-delay=".15"><div class="m3d feature-3d" data-model="vine-pro" data-theme="dark" data-color="rose" data-view="back" role="img" aria-label="ロゼの Vine Pro の3Dモデル"><img src="img/vine-pro.svg" alt="Vine Pro のイラスト" width="500" height="500" loading="lazy"></div></div>
         </div>
       </div>
     </section>
@@ -152,14 +152,14 @@
         <div class="section-head reveal"><h2 class="h-l" id="cmp-title">あなたに合うのは、どっち？</h2></div>
         <div class="compare">
           <div class="compare-col reveal">
-            <img src="img/vine-pro.svg" alt="" width="220" height="220" loading="lazy">
+            <div class="m3d compare-3d" data-model="vine-pro" data-zoom="1.05"><img src="img/vine-pro.svg" alt="" width="220" height="220" loading="lazy"></div>
             <h3>Vine Pro</h3>
             <p class="price">¥139,800から</p>
             <ul><li><b>6.3インチ Lumina OLED</b>1〜120Hz</li><li><b>トリプルカメラ</b>5倍望遠つき</li><li><b>G1 チップ</b>Pro 向けGPU</li><li><b>最大29時間</b>ビデオ再生</li></ul>
             <a class="btn btn-primary" href="contact.html#form">購入相談</a>
           </div>
           <div class="compare-col reveal" data-delay=".1">
-            <img src="img/vine.svg" alt="" width="220" height="220" loading="lazy">
+            <div class="m3d compare-3d" data-model="vine"><img src="img/vine.svg" alt="" width="220" height="220" loading="lazy"></div>
             <h3>Vine</h3>
             <p class="price">¥89,800から</p>
             <ul><li><b>6.1インチ OLED</b>60Hz</li><li><b>デュアルカメラ</b>48MP メイン</li><li><b>G1 チップ</b>5コアGPU</li><li><b>最大22時間</b>ビデオ再生</li></ul>
@@ -201,5 +201,6 @@
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
   <script src="js/common.js"></script>
   <script type="module" src="js/viewer.js"></script>
+  <script type="module" src="js/product3d.js"></script>
 </body>
 </html>

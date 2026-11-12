@@ -449,3 +449,18 @@ fieldset.field { border: 0; padding: 0; margin-inline: 0; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* ---------- live 3D product models ---------- */
+.m3d { position: relative; width: 100%; touch-action: pan-y; cursor: grab; user-select: none; -webkit-user-select: none; }
+.m3d:active { cursor: grabbing; }
+.m3d canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.m3d > img { margin: 0 auto; max-height: 100%; width: auto; }
+.tile .tile-3d { margin-top: auto; height: clamp(260px, 28vw, 360px); }
+.tile.span-6 .tile-3d { height: clamp(320px, 38vw, 480px); }
+.tile.span-2 .tile-3d { height: clamp(260px, 24vw, 320px); }
+.product-img { padding: 8px; }
+.product-img .m3d { height: 100%; }
+.compare-col .compare-3d { height: 280px; margin-bottom: 20px; }
+.compare-col .compare-3d img { height: 100%; margin: 0 auto; }
+.feature-3d { height: clamp(380px, 46vw, 580px); }
+@media (max-width: 600px) { .tile .tile-3d, .tile.span-2 .tile-3d { height: 300px; } }

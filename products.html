@@ -11,6 +11,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script type="importmap">
+  { "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  } }
+  </script>
 </head>
 <body data-page="products">
   <div class="practice-bar" role="note">本サイトは講義課題として制作したものです。<span class="en">This site is created as a course exercise.</span></div>
@@ -48,7 +54,7 @@
     <section aria-label="製品一覧">
       <div class="container">
         <article class="product" id="vine-pro">
-          <div class="product-img reveal" style="background:#0b0613"><img src="img/vine-pro.svg" alt="Vine Pro の背面と前面のイラスト" width="500" height="500" loading="lazy"></div>
+          <div class="product-img reveal" style="background:#0b0613"><div class="m3d" data-model="vine-pro" data-theme="dark"><img src="img/vine-pro.svg" alt="Vine Pro の背面と前面のイラスト" width="500" height="500" loading="lazy"></div></div>
           <div class="reveal" data-delay=".1">
             <span class="tag">新登場</span>
             <h2>Vine Pro</h2>
@@ -60,7 +66,7 @@
         </article>
 
         <article class="product rev" id="vine">
-          <div class="product-img reveal"><img src="img/vine.svg" alt="3色の Vine のイラスト" width="500" height="500" loading="lazy"></div>
+          <div class="product-img reveal"><div class="m3d" data-model="vine"><img src="img/vine.svg" alt="3色の Vine のイラスト" width="500" height="500" loading="lazy"></div></div>
           <div class="reveal" data-delay=".1">
             <h2>Vine</h2>
             <p class="lead">はじめての、ちょうどいい。</p>
@@ -71,7 +77,7 @@
         </article>
 
         <article class="product" id="book">
-          <div class="product-img reveal"><img src="img/grapebook.svg" alt="GrapeBook Air のイラスト" width="500" height="360" loading="lazy"></div>
+          <div class="product-img reveal"><div class="m3d" data-model="book"><img src="img/grapebook.svg" alt="GrapeBook Air のイラスト" width="500" height="360" loading="lazy"></div></div>
           <div class="reveal" data-delay=".1">
             <h2>GrapeBook Air</h2>
             <p class="lead">1.1kg。一日中、どこへでも。</p>
@@ -82,7 +88,7 @@
         </article>
 
         <article class="product rev" id="buds">
-          <div class="product-img reveal"><img src="img/buds.svg" alt="Grape Buds Pro のイラスト" width="500" height="400" loading="lazy"></div>
+          <div class="product-img reveal"><div class="m3d" data-model="buds"><img src="img/buds.svg" alt="Grape Buds Pro のイラスト" width="500" height="400" loading="lazy"></div></div>
           <div class="reveal" data-delay=".1">
             <h2>Grape Buds Pro</h2>
             <p class="lead">静けさを、耳に。</p>
@@ -93,7 +99,7 @@
         </article>
 
         <article class="product" id="band">
-          <div class="product-img reveal"><img src="img/band.svg" alt="Grape Band のイラスト" width="400" height="460" loading="lazy" style="max-height:80%"></div>
+          <div class="product-img reveal"><div class="m3d" data-model="band"><img src="img/band.svg" alt="Grape Band のイラスト" width="400" height="460" loading="lazy" style="max-height:80%"></div></div>
           <div class="reveal" data-delay=".1">
             <h2>Grape Band</h2>
             <p class="lead">からだの声を、聞こう。</p>
@@ -179,5 +185,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
   <script src="js/common.js"></script>
+  <script type="module" src="js/product3d.js"></script>
 </body>
 </html>
